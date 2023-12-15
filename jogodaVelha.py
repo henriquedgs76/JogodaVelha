@@ -106,5 +106,13 @@ class JogoDaVelhaGUI:
 if __name__ == "__main__":
     root = tk.Tk()
     root.configure(bg="#2C3E50")
+    escolha_inicial = messagebox.askquestion("Escolher Primeiro Jogador", "Você quer começar com 'X'?")
+
     jogo_da_velha_gui = JogoDaVelhaGUI(root)
+    if escolha_inicial =="no":
+        jogo_da_velha_gui.vez_do_jogador = 1
+        jogo_da_velha_gui.resetar_jogo()
+
+    
+
     root.mainloop()
